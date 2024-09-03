@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewData["Title"] = "URLLinkedin";
+}
+
+<h1>URLLinkedin</h1>
+<button id="linkedin" onclick="linkedinLogin()">Login Linkedin</button>
+
+<h1> @ViewData["accessToken"] </h1>
+<script>
+    function linkedinLogin() {
+        window.open("https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86rpnm3kvlpu2a&redirect_uri=https://localhost:6100/Home/URLLinkedin&state=987654321&scope=profile,w_member_social,email");
+    }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
